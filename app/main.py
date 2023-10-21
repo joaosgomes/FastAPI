@@ -4,8 +4,8 @@ from typing import Union,List
 from fastapi import FastAPI, Request, status
 from fastapi.responses import RedirectResponse, StreamingResponse
 from fastapi.websockets import WebSocket
-import random
-from models import Model
+import random 
+# from models import Model
 
 
 description = """
@@ -35,12 +35,12 @@ class Tags(Enum):
     websocket = "Websocket"
 
 
-db:List[Model]=[
-Model(
-    Id = 1, 
-    Value = 'Value 1'
-    )
-]
+#db:List[Model]=[
+#Model(
+#    Id = 1, 
+#    Value = 'Value 1'
+#    )
+#]
 
 #Middleware
 @app.middleware("http")
