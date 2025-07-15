@@ -95,16 +95,7 @@ def perform_healthcheck():
     '''
     return {'healthcheck': 'Everything OK!'}
 
-@app.get("/fetch-headers", response_class=JSONResponse)
-async def fetch_headers():
-    url = "https://httpbun-tunnel.tunnel.joaosilvagomes.com/headers"
-    
-    async with httpx.AsyncClient() as client:
-        try:
-            response = await client.get(url)
-            return response.json()  # Return the full response from that endpoint
-        except Exception as e:
-            return {"error": "Failed to fetch headers", "details": str(e)}
+
 
 
 # @app.websocket_route("/ws")
