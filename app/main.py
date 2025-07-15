@@ -5,8 +5,7 @@ from fastapi import FastAPI, Request, status
 from fastapi.responses import RedirectResponse, StreamingResponse
 from fastapi.websockets import WebSocket
 import random 
-from fastapi.responses import JSONResponse
-import httpx
+
 # from models import Model
 
 
